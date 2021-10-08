@@ -1,0 +1,35 @@
+1)a = int(input())
+if a % 2 == 0:
+	print('Четное число')
+else:
+    print('Нечентное число')
+
+2)a = int(input())
+print (a*(9/5)+32, "По Фаренгейту")
+		
+
+3) a = int(input())
+if a % 5 == 0 and a % 7 == 0:
+	print ("11")
+elif a % 5 == 0 and a % 7 != 0:
+	print ("01")
+elif a % 5 != 0 and a % 7 != 0:
+	print ("10")
+else:
+     print ("00")
+
+  
+4)a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+
+discr = b ** 2 - 4 * a * c
+if discr > 0:
+x1 = (-b + discr**(0.5)) / (2 * a)
+x2 = (-b - discr**(0.5)) / (2 * a)
+print(x1, x2)
+elif discr == 0:
+x = -b / (2 * a)
+print("корень уравнения",x)
+else:
+print("Корней нет")
