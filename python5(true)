@@ -1,0 +1,105 @@
+1.
+
+
+def c(array,k):
+    answer=0
+    for i in array:
+        if int(i) > k:
+            answer+=1
+    return answer
+x,k=input().split(' '),int(input())
+print(c(x,k))
+
+3.
+
+
+a = input("Введите своё ФИО: ")
+x = a.split()
+f = x [0] [0]
+i = x [1][0]
+o = x [2][0]
+print(f.capitalize()+". "+i.capitalize()+". "+o.capitalize()+".")
+
+5.
+
+
+pr = int(input('Выберите функцию: 1-гласные, 2-согласные '))
+p= str(input('Введите текст: ').lower())
+x=list(p)
+def gl(c=int(0), j=int(0)):
+        for i in x:
+            gll = "aeiouyаоэеиыуёюя"
+            l = list(gll)
+            k = l.count(x[c])
+            c += 1
+            if k == 1:
+                j += 1
+        print(j)
+def sog(c=int(0), j=int(0)):
+        for i in x:
+            sogl = "bcdfghjklmnpqrstvwxyzбвгджзйклмнпрстфхцчшщ"
+            l = list(sogl)
+            k = l.count(x[c])
+            c += 1
+            if k == 1:
+                j += 1
+        print(j)
+if pr == 1 : gl()
+elif pr == 2: sog()
+else : print ("1 или 2")
+
+
+6.
+
+
+def mostchar(word):
+    c = 0
+    ans=''
+    for i in word:
+        if(c < word.count(i)):
+            c = word.count(i)
+            ans = i
+    return ans
+
+word = input('Введи слово: ')
+print(mostchar(word))5.
+pr = int(input('Выберите функцию: 1-гласные, 2-согласные '))
+p= str(input('Введите текст: ').lower())
+x=list(p)
+
+def gl(c=int(0), j=int(0)):
+        for i in x:
+            gll = "aeiouyаоэеиыуёюя"
+            l = list(gll)
+            k = l.count(x[c])
+            c += 1
+            if k == 1:
+                j += 1
+
+        print(j)
+def sog(c=int(0), j=int(0)):
+        for i in x:
+            sogl = "bcdfghjklmnpqrstvwxyzбвгджзйклмнпрстфхцчшщ"
+            l = list(sogl)
+            k = l.count(x[c])
+            c += 1
+            if k == 1:
+                j += 1
+        print(j)
+if pr == 1 : gl()
+elif pr == 2: sog()
+else : print ("1 или 2")
+
+6.
+
+
+def mostchar(word):
+    c = 0
+    ans=''
+    for i in word:
+        if(c < word.count(i)):
+            c = word.count(i)
+            ans = i
+    return ans
+word = input('Введи слово: ')
+print(mostchar(word))
