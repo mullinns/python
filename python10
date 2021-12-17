@@ -1,0 +1,46 @@
+1.
+
+
+def fibbonachi(n):
+    if(n in [1,2]):
+        return 1
+    return fibbonachi(n - 1) + fibbonachi(n - 2)
+print(fibbonachi(9))
+
+
+3.
+
+
+fibbonachi_memory={
+    1:1,
+    2:1
+}
+
+def fibbonachi(n):
+    result = fibbonachi_memory.get(n)
+    if(result is None):
+        result = fibbonachi(n - 1) + fibbonachi(n - 2)
+        fibbonachi_memory[n] = result
+    return result
+print(fibbonachi(6))
+
+4.
+
+Сложность - 1*n
+
+5.
+
+
+fibbonachi_memory={
+    1:1,
+    2:1
+}
+
+def fibbonachi(n):
+    result=0
+    i=3
+    while i <=n:
+        fibbonachi_memory[i] = fibbonachi_memory[i - 1] + fibbonachi_memory[i - 2]
+        i += 1
+    return fibbonachi_memory[n]
+print(fibbonachi(3))
